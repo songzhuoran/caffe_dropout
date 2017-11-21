@@ -1,0 +1,20 @@
+# reduce the learning rate after 8 epochs (4000 iters) by a factor of 10
+# The train/test net protocol buffer definition
+net: "/home/szr/caffe/examples/cifar10/vgg-A.prototxt"
+regularization_type: "L2"
+test_iter: 100
+test_interval: 100
+base_lr: 0.1
+momentum: 0.9
+lr_policy: "step"
+gamma: 0.9
+stepsize:2000
+weight_decay: 0.0005
+display: 100
+max_iter:100000
+snapshot: 100000
+snapshot_prefix: "vgg_adadelta"
+solver_mode: GPU
+type: "AdaDelta"
+delta: 1e-6
+debug_info: false
